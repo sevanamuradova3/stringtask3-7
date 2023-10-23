@@ -1,26 +1,42 @@
 
 //const arr = [2, 4, 5, 9, 1];
 //3. Bu massivin minimum elementini tapın: 
-//string metodu ile;
-const massiv = [2, 4, 5, 9, 1];
-const minElement = Math.min(...massiv);
+const massiv= [2, 4, 5, 9, 1];
+let min = massiv[0]; 
+for (let i = 1; i < massiv.length; i++) {
+    if (massiv[i] < min) {
+        min = massiv[i]; 
+    }
+}
 
-console.log("Minimum element:", minElement);
+console.log("Minimum:", min);
+
+
+
 //4. Bu massivin maksimum elementini tapın
 
 
-const maxElement = Math.max(...massiv);
+let max= massiv[0]; 
+for (let i = 1; i < massiv.length; i++) {
+    if (massiv[i] > max) {
+        max = massiv[i]; 
+    }
+}
 
-console.log("Maksimum element:", maxElement);
+console.log("Maksimum:", max);
+
+
 
 
 //5. Bu massivin minimum elementinin indeksini tapın.
-const minElementIndex = massiv.indexOf(minElement);
+const minElementIndex = massiv.indexOf(min);
 
 console.log("Minimum elementin indeksi:", minElementIndex);
 //6. Bu massivin maksimum elementinin indeksini tapın.
-const maxElementIndex= massiv.indexOf(maxElement);
+
+const maxElementIndex= massiv.indexOf(max);
 console.log("Maksimum elementin indeksi:", maxElementIndex);
+
 //7. Tək indeksli massiv elementlərinin cəmini hesablayın
 
 let sum = 0;
